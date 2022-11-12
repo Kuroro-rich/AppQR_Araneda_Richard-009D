@@ -1,18 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="end" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-subtitle>AppQR</ion-card-subtitle>
+      <ion-card-title>Bienvenid@ {{Nombre}}</ion-card-title>
+    </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card-content>
+      <img src="assets/alumnos.jpg" class="ion-padding">
+      <p class="parrafo">
+      Bienvenido a "RegistrApp", para empezar puedes dirigirte a la seccion "Escanear QR" para que quedes presente en tu clase.
+     </p>
+    </ion-card-content>
+  </ion-card>
+
+
+
 </ion-content>

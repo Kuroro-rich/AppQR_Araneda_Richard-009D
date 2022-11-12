@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Feriados } from '../pages/Interfaces/interfaces';
+import { Feriados } from '../../pages/Interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'

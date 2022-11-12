@@ -16,7 +16,11 @@ export class FeriadosPage implements OnInit {
   ngOnInit() {
     this.ApiService.getFeriados().subscribe(resp => {
       this.feriados=resp;
-  }
+  })
+}
   mostrarMenu(){
-    this.menuController.open('first');
+    this.menuController.enable(true,'first')
+    this.menuController.open('first')
+    }
+  
 }

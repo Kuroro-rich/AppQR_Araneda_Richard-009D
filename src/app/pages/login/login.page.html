@@ -6,10 +6,8 @@
   <form>
     <app-input label="Email ID"></app-input>
     <app-input label="Password" type="password"></app-input>
-    <a routerLink="#" class="forgot-password-link" >Has olvidado tu contraseña?</a>
-
-
-    <app-button label="Login"></app-button>
+    
+    <app-button label="Login" routerLink="[/inicio]"></app-button>
+    <p class="footer-text">Eres nuevo usuario, <a href="/registro">Sing up</a></p>
   </form>
-  <p class="footer-text">Eres nuevo usuario, <a href="#">Sing up</a></p>
 </ion-content>
