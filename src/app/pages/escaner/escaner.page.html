@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="first">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="end" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Escaner</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-icon class="icono" name="Escaner"></ion-icon>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Notas:</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Primero debes otorgar permiso a la camra .
+    </ion-card-content>
+  </ion-card>
+<ion-button class="boton" (click)="Escaneo()" expand="full" fill="clear" shape="round" routerLink="/inicio">
+  ESCANEAR
+</ion-button>
 </ion-content>

@@ -22,7 +22,7 @@ export class AppComponent {
     },
     { 
     icon: 'qr-code-outline',
-    name: 'Escaneo QR',
+    name: 'Escaner',
     redirecTo: '/escaner'
     },
    { 
