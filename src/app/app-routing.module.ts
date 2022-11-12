@@ -29,14 +29,9 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module').then( m => m.PagesPageModule)
+  path: 'escaner',
+  loadChildren: () => import('./pages/escaner/escaner.module').then( m => m.EscanerPageModule)
   },
-  {
-    path: 'escaner',
-    loadChildren: () => import('./escaner/escaner.module').then( m => m.EscanerPageModule)
-  },
-
 ];
 
 @NgModule({
