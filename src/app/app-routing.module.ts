@@ -10,28 +10,25 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
     path: 'qr',
-    loadChildren: () => import('./qr/qr.module').then( m => m.QRPageModule)
-  },
-  {
-    path: 'api',
-    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
+    loadChildren: () => import('./pages/qr/qr.module').then( m => m.QRPageModule)
   },
   {
     path: 'feriados',
-    loadChildren: () => import('./feriados/feriados.module').then( m => m.FeriadosPageModule)
+    loadChildren: () => import('./pages/feriados/feriados.module').then( m => m.FeriadosPageModule)
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+
 ];
 
 @NgModule({
