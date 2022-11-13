@@ -2,10 +2,18 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
 export interface Usuario{
-  nomUsuario: string;
+  nombreUsuario: string;
   correoUsuario:string;
-  passUsuario:string;
-  repassUsuario: string; 
+  passwordUsuario: string;
+  tipo:string;
+  carUsuario:string;
+}
+
+export interface Docente{
+  nombreDocente: string;
+  EmailDocente:string;
+  passwordDocente:string;
+  tipo:string;
 }
 
 const USERS_KEY = 'my-usuarios';  
@@ -16,7 +24,9 @@ const USERS_KEY = 'my-usuarios';
 export class RegistroserviceService {
 
   private _storage: Storage;
-
+  AntiguoUsuario: Docente[]=[];
+  NuevoUsuarios: Usuario[]=[];
+  UsuarioEncontrado: any;
   constructor(private storage: Storage) { 
     this.init();
    }
@@ -40,8 +50,12 @@ export class RegistroserviceService {
    })
   }//findelmetodo
 
-  //obtener todos los objetos desde el storage 
+  
   async getUsuarios():Promise<Usuario[]>{
+    return this.storage.get(USERS_KEY);
+  }
+
+  async getDocente():Promise<Docente[]>{
     return this.storage.get(USERS_KEY);
   }
 

@@ -3,11 +3,31 @@
   <h1>Create una Cuenta,</h1>
   <h3>Registrate para iniciar session!</h3>
 
-  <form>
-    <app-input label="Full Name"></app-input>
-    <app-input label="Email ID"></app-input>
-    <app-input label="Password" type="password"></app-input>
+  <form [formGroup] = "formularioRegistro" (keyup.enter)="CrearUsuario()" >
+    <ion-item class="objeto">
+      <ion-label>Nombre: </ion-label>
+      <ion-input type="text" placeholder="Nombre" position="floating" formControlName="nombre" minlength="3">
+      </ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label>Email: </ion-label>
+      <ion-input type="text" placeholder="Email" position="floating" formControlName="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+      </ion-input>
+    </ion-item>
     
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input type="password" placeholder="Contraseña" position="floating" formControlName="password" minlength="6">
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Carrera: </ion-label>
+      <ion-input type="text" placeholder="Carrera" position="floating"
+                 formControlName="carrera" minlength="6" >
+      </ion-input>
+    </ion-item>
 
     <app-button label="Registro" hrf="/login"></app-button>
   </form>

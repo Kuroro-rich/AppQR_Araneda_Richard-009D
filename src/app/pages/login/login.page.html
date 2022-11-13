@@ -3,9 +3,28 @@
   <h1>Bienvenido,</h1>
   <h3>Iniciar para poder ver sus Asistencia!</h3>
 
-  <form>
-    <app-input label="Email ID"></app-input>
-    <app-input label="Password" type="password"></app-input>
+  <form [formGroup]="formularioLogin">
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="Email" position="floating" formControlName="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input type="password" placeholder="Contraseña" value="" formControlName="password">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>loguear Como :</ion-label>
+      <ion-select placeholder="Eliga el Tipo de Usuario:" formControlName="tipo" mode="ios" type="text">
+        <ion-select-option required value="Estudiante">Estudiante</ion-select-option>
+        <ion-select-option required value="Docente">Docente</ion-select-option>
+      </ion-select>
+    </ion-item>
     
     <app-button label="Login" routerLink="[/inicio]"></app-button>
     <p class="footer-text">Eres nuevo usuario, <a href="/registro">Sing up</a></p>
