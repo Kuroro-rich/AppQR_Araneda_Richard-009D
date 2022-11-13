@@ -34,7 +34,7 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
-  async CrearUsuario(){
+  async CreaUsuarios(){
     var form = this.formularioRegistro.value;
     var error=0;
     if (this.formularioRegistro.invalid){
