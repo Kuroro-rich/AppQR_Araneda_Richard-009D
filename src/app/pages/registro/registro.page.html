@@ -1,9 +1,9 @@
 
 <ion-content class="ion-padding">
   <h1>Create una Cuenta,</h1>
-  <h3>Registrate para iniciar session!</h3>
+  <h3>Registrate para iniciar Sesión!</h3>
 
-  <form [formGroup] = "formularioRegistro" (keyup.enter)="CreaUsuarios()" >
+  <form [formGroup] = "formularioRegistro" (keyup.enter)="Guardar" >
     <ion-item class="objeto">
       <ion-label>Nombre: </ion-label>
       <ion-input type="text" placeholder="Nombre" position="floating" formControlName="nombre" minlength="3">

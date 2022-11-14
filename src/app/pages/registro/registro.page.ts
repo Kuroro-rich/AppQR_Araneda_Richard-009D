@@ -26,15 +26,15 @@ export class RegistroPage implements OnInit {
                   'Email': new FormControl("", Validators.required),
                   'password': new FormControl("", Validators.required),
                   'carrera': new FormControl("", Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z ]*$')])), 
-                },
-                {
+                });
+                
                   
-                })
+                
               }
   ngOnInit() {
   }
 
-  async CreaUsuarios(){
+  async Guardar(){
     var form = this.formularioRegistro.value;
     var error=0;
     if (this.formularioRegistro.invalid){
