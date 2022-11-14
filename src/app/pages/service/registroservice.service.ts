@@ -6,7 +6,6 @@ export interface Usuario{
   correoUsuario:string;
   passwordUsuario: string;
   tipo:string;
-  carUsuario:string;
 }
 
 export interface Docente{

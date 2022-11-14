@@ -25,7 +25,6 @@ export class RegistroPage implements OnInit {
                   'nombre': new FormControl("", Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z ]*$')])),
                   'Email': new FormControl("", Validators.required),
                   'password': new FormControl("", Validators.required),
-                  'carrera': new FormControl("", Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z ]*$')])), 
                 });
                 
                   
@@ -54,7 +53,6 @@ export class RegistroPage implements OnInit {
             this.NuevoUsuarios.nombreUsuario = form.nombre;
             this.NuevoUsuarios.correoUsuario = form.correo;
             this.NuevoUsuarios.passwordUsuario = form.password;
-            this.NuevoUsuarios.carUsuario = form.carrera;
             this.registroService.addUsuario(this.NuevoUsuarios).then(dato =>{
               this.NuevoUsuarios = <Usuario>{};
               this.showToast('Usuario Creado');
@@ -74,7 +72,6 @@ export class RegistroPage implements OnInit {
               this.NuevoUsuarios.nombreUsuario = form.nombre;
               this.NuevoUsuarios.correoUsuario = form.correo;
               this.NuevoUsuarios.passwordUsuario = form.password;
-              this.NuevoUsuarios.carUsuario = form.carrera;
               this.registroService.addUsuario(this.NuevoUsuarios).then(dato =>{
                 this.NuevoUsuarios = <Usuario>{};
                 this.showToast('Usuario Creado');
