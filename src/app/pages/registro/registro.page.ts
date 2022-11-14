@@ -13,7 +13,6 @@ export class RegistroPage implements OnInit {
   formularioRegistro: FormGroup;
   NuevoUsuarios : Usuario = <Usuario>{};
   AntiguoUsuario : Usuario[] = [];
-  MustMach: any;
 
   constructor( private navController: NavController,
               private registroService: RegistroserviceService,
