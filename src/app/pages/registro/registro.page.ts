@@ -24,6 +24,7 @@ export class RegistroPage implements OnInit {
                   'nombre': new FormControl("", Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z ]*$')])),
                   'Email': new FormControl("", Validators.required),
                   'password': new FormControl("", Validators.required),
+                  'tipo': new FormControl("", Validators.required),
                 });
                 
                   
@@ -50,7 +51,7 @@ export class RegistroPage implements OnInit {
           if(this.AntiguoUsuario== null){
             this.NuevoUsuarios.tipo = "Estudiante";
             this.NuevoUsuarios.nombreUsuario = form.nombre;
-            this.NuevoUsuarios.correoUsuario = form.correo;
+            this.NuevoUsuarios.correoUsuario = form.Email;
             this.NuevoUsuarios.passwordUsuario = form.password;
             this.registroService.addUsuario(this.NuevoUsuarios).then(dato =>{
               this.NuevoUsuarios = <Usuario>{};
