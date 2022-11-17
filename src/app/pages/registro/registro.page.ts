@@ -58,7 +58,7 @@ export class RegistroPage implements OnInit {
               this.showToast('Usuario Creado');
             })
             this.formularioRegistro.reset();
-            this.navController.navigateRoot('inicio-sesion'); 
+            this.navController.navigateRoot('inicio'); 
           }
           else{
             for (let obj of this.AntiguoUsuario){
@@ -70,14 +70,14 @@ export class RegistroPage implements OnInit {
             if(error == 0){
               this.NuevoUsuarios.tipo = "Estudiante";
               this.NuevoUsuarios.nombreUsuario = form.nombre;
-              this.NuevoUsuarios.correoUsuario = form.correo;
+              this.NuevoUsuarios.correoUsuario = form.Email;
               this.NuevoUsuarios.passwordUsuario = form.password;
               this.registroService.addUsuario(this.NuevoUsuarios).then(dato =>{
                 this.NuevoUsuarios = <Usuario>{};
                 this.showToast('Usuario Creado');
               })
               this.formularioRegistro.reset();
-              this.navController.navigateRoot('inicio-sesion');            
+              this.navController.navigateRoot('inicio');            
             }
           }
           

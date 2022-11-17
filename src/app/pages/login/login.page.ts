@@ -49,7 +49,7 @@ export class LoginPage implements OnInit {
           }
           else{
             for (let obj of this.usuarios){
-              if (f.tipo == obj.tipo && f.correo == obj.correoUsuario && f.password==obj.passwordUsuario){
+              if (f.tipo == obj.tipo && f.Email == obj.correoUsuario && f.password==obj.passwordUsuario){
                 a=1;
                 b=obj.correoUsuario;
                 console.log('ingresado');
