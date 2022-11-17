@@ -21,10 +21,12 @@ const USERS_KEY = 'my-usuarios';
   providedIn: 'root'
 })
 export class RegistroserviceService {
+  
 
   private _storage: Storage;
   AntiguoUsuario: Docente[]=[];
   NuevoUsuarios: Usuario[]=[];
+  UsuarioEncontrado: any;
  
   constructor(private storage: Storage) { 
     this.init();
