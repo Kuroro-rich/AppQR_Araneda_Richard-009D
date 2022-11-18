@@ -32,4 +32,19 @@ export class AppComponent {
     },
 
   ];
+
+  componentes2 : Componente [] = [
+    { 
+      icon: 'home-outline',
+      name: 'Inicio',
+      redirecTo: '/inicio-Profesor'
+    },
+    { 
+      icon: 'qr-code-outline',
+      name: 'Generar QR',
+      redirecTo: '/qr'
+    },
+    
+
+  ]
 }
