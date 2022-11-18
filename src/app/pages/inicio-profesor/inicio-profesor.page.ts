@@ -12,12 +12,13 @@ export class InicioProfesorPage implements OnInit {
   constructor(private menuController: MenuController,
     private registroService: RegistroserviceService) { }
 
-ngOnInit() {
+ngOnInit() { this.menuController.close("first")
 }
 
 mostrarMenu(){
 this.menuController.enable(true, 'second')
 this.menuController.open('second');
+
 }
 
 Usuario=localStorage.getItem('Email');

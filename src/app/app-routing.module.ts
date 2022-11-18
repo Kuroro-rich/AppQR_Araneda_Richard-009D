@@ -46,12 +46,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio-profesor/inicio-profesor.module').then( m => m.InicioProfesorPageModule),
     canActivate: [IngresadoDocenteGuard]
   },
-  {
-    path: 'registro-profesor',
-    loadChildren: () => import('./pages/registro-profesor/registro-profesor.module').then( m => m.RegistroProfesorPageModule),
-    canActivate: [NoIngresadoGuard]
-  },
-
+ 
 ];
 
 @NgModule({

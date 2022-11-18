@@ -12,7 +12,7 @@ export class InicioPage implements OnInit {
 
 
 
-ngOnInit() {
+ngOnInit() { this.menuController.close("second")
 
 }
 
