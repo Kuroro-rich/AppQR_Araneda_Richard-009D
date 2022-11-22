@@ -7,8 +7,19 @@ describe('new App', () => {
     page = new AppPage();
   });
 
-  it('should be blank', () => {
+  it('prueba 1', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('Start with Ionic UI Components');
+    expect(page.getParagraphText()).toContain('Bienvenido a Protactor');
+  });
+  
+  it('prueba 2', () => {
+    page.navigateTo();
+    expect(page.getParagraphText2()).toContain('Hola');
+  });
+
+
+  it('prueba 1', () => {
+    page.navigateTo();
+    expect(page.getParagraphText3()).toContain('Cualquier cosita');
   });
 });

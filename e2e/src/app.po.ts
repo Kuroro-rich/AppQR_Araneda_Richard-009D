@@ -6,6 +6,12 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.deepCss('app-root ion-content')).getText();
+    return element(by.deepCss('app-root ')).getText();
+  }
+  getParagraphText2() {
+    return element(by.deepCss('app-root h2')).getText();
+  }
+  getParagraphText3() {
+    return element(by.deepCss('app-root h3')).getText();
   }
 }
