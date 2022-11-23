@@ -9,17 +9,17 @@ describe('new App', () => {
 
   it('prueba 1', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('Bienvenido a Protactor');
+    expect(page.getParagraphText()).toContain('Registrarse');
   });
   
   it('prueba 2', () => {
     page.navigateTo();
-    expect(page.getParagraphText2()).toContain('Hola');
+    expect(page.getParagraphText2()).toContain('Login');
   });
 
 
   it('prueba 1', () => {
     page.navigateTo();
-    expect(page.getParagraphText3()).toContain('Cualquier cosita');
+    expect(page.getParagraphText3()).toContain('inicio');
   });
 });
