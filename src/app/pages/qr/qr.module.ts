@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { QRPageRoutingModule } from './qr-routing.module';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { QRPage } from './qr.page';
 
@@ -13,7 +14,8 @@ import { QRPage } from './qr.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    QRPageRoutingModule
+    QRPageRoutingModule,
+    QRCodeModule
   ],
   declarations: [QRPage]
 })
