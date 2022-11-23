@@ -5,20 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './qr.page.html',
   styleUrls: ['./qr.page.scss'],
 })
-export class QRPage implements OnInit {
-  qrCodeString= 'Hola Mundo'; 
-  scannedResult:any;
-  constructor() { }
+export class QRPage  {
+  qrCodeString='Bienvenido a RegistrApp';
+  scannedResult: any;
+  constructor() {}
 
   usuario={
     nom:'',
   }
 
-  generaScan(){
-    this.qrCodeString= this.usuario.nom;
+  GenerarQr(){
+    this.qrCodeString=this.usuario.nom;
   }
 
-  verScan(){
-    this.scannedResult=this.qrCodeString;
+  VerQr(){
+    this.scannedResult = this.qrCodeString;
   }
 }
