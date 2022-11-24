@@ -7,7 +7,9 @@ export interface Feriados {
   }
 
 
-  export interface leyes {
-    nombre: String;
-    url: String;
+  export interface data {
+    Fecha: String;
+    Titulo: String;
+    Tipo: String;
+    irrenunciable: boolean;
   }
