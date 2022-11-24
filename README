@@ -1,0 +1,15 @@
+# AppQR
+** Primeramente instalar el storage con este comando
+    - npm install --save @ionic/storage
+    - nom install --save @ionic/storage-angular.
+
+** El primero para descargar protractor y utilizar el framework Jasmine para realizar testeos e2e (De extremo a extremo).
+    - npm install -g protractor 
+** Una vez instalado para ejecutar el testeo serian estos comandos **
+    - npm run e2e
+    - ng e2e
+** Este comando es para descargar La biblioteca para generar QR dentro de la app. **
+    - npm install angularx-qrcode@14.0.0 --save
+    - Si no sabes cual es tu version entrar en package.json y ir al link de a bajo 
+ ** https://www.npmjs.com/package/angularx-qrcode#installation **
+
