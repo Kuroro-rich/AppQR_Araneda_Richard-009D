@@ -7,27 +7,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="ion-text-center">
-    <ion-card-content>
-       <ion-item>
-        <ion-label position="fixed">Name: </ion-label>
-        <ion-input type="text" [(ngModel)]="usuario.nom" required></ion-input>
-       </ion-item>
-
-       <ion-button (click)="GenerarQr()" expand="block" fill="outline" shape="round">
-         Generate QR
-       </ion-button>
-
-       <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-button (click)="VerQr()" expand="block" fill="outline" shape="round">
-    View QR
-  </ion-button>
-
-  <ion-item>
-    <ion-label class="ion-text-wrap">Scan Result: {{scannedResult}} </ion-label>
-  </ion-item>
+  <ion-content>
+    <ion-icon class="icono" name="qr-code-outline" id="icon"></ion-icon>
+    <qrcode class="icono" [qrdata]="qrCodeString" id="qr" style="display: none;"  [width]="170" [errorCorrectionLevel]="'M'"></qrcode>>
+    <form [formGroup] = "SeccionForm">
+      <ion-item>
+        <ion-label>Asignaturas:</ion-label>
+        <ion-select placeholder="Selecciones:" formControlName="seccion" mode="ios" type="text">
+          <ion-select-option required value="PGY4121_005D">PGY4121_005D</ion-select-option>
+          <ion-select-option required value="PGY4121_006D">PGY4121_006D</ion-select-option>
+          <ion-select-option required value="PGY4121_007D">PGY4121_007D</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br>
+      <ion-button (click)="Generar2()" expand="block" fill="outline" shape="round">
+        Generar QR
+      </ion-button>
+      </form>
    
 </ion-content>
